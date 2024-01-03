@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ElibraryManagement.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+
+    <%--bootstrap css--%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--datatables css--%>
+    <link href="datatables/css/jquery.dataTables.min.css" rel="stylesheet" />
+    <%--fontawesome css--%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+
+    <%--our custom css--%>
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+
+    <%---------------------------------------------------------------------------------------%>
+    <link href="css/Footer-Dark.css" rel="stylesheet" />
+    <%---------------------------------------------------------------------------------------%>
+
+    <link href="css/Footer-Basic.css" rel="stylesheet" />
+    <link href="css/customstylesheet.css" rel="stylesheet" />
+    <link href="css/best-carousel-slide.css" rel="stylesheet" />
+    <link href="css/Article-List.css" rel="stylesheet" />
+    <link href="css/Accordion-with-custom-design.css" rel="stylesheet" />
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+        }
+    </style>
+
+    <%--jquery--%>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <%--popper js--%>
+    <script src="bootstrap/js/popper.min.js"></script>
+    <%--bootstrap js--%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <%--Datatables js--%>
+    <script src="datatables/js/jquery.dataTables.min.js"></script>
+
+    <script src="js/Accordion-with-custom-design.js"></script>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #282d32;">
+                <a class="navbar-brand" href="homepage.aspx" style="color: #EEECEC">
+                    <img src="imgs/main_logo.png" width="30" height="30" style="color: #6600CC" />
+                    GuitarShop
+                </a>
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="homepage.aspx" style="color: #EEECEC">Головна</a>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton31" runat="server" OnClick="LinkButton31_Click" ForeColor="#EEECEC">Список гітар</asp:LinkButton>
+
+                        </li>
+
+                        <li class="nav-item active">
+                            <a class="nav-link" href="#" style="color: #EEECEC">Про нас</a>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton30" runat="server" OnClick="LinkButton30_Click" ForeColor="#EEECEC">Адміністрування</asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton50" runat="server" OnClick="LinkButton50_Click" ForeColor="#EEECEC">Звітність по товарам</asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton51" runat="server" OnClick="LinkButton51_Click" ForeColor="#EEECEC">Звітність по користувачам</asp:LinkButton>
+
+                        </li>
+
+                    </ul>
+
+                    <ul class="navbar-nav">
+
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton5" runat="server" OnClick="LinkButton5_Click" ForeColor="#EEECEC">Додати гітару</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton13" runat="server" OnClick="LinkButton13_Click" ForeColor="#EEECEC">Корзина</asp:LinkButton>
+                        </li>
+
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton1" runat="server" OnClick="LinkButton1_Click" ForeColor="#EEECEC">Авторизація</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton2" runat="server" OnClick="LinkButton2_Click" ForeColor="#EEECEC">Реєстрація</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton3" runat="server" OnClick="LinkButton3_Click" Visible="False" ForeColor="#EEECEC">Вийти</asp:LinkButton>
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton18" runat="server" OnClick="LinkButton18_Click" Visible="False" ForeColor="#EEECEC">Профіль</asp:LinkButton>
+
+                        </li>
+                        <li class="nav-item active">
+                            <asp:LinkButton class="nav-link" ID="LinkButton7" runat="server" OnClick="LinkButton7_Click" Visible="False" ForeColor="#33CCCC">Привіт, user</asp:LinkButton>
+
+                        </li>
+
+                    </ul>
+                </div>
+
+
+            </nav>
+        </div>
+
+
+        <!-- Main Content Placeholder -->
+        <div >
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+
+        <!-- ./Footer -->
+
+        <footer class="footer-dark">
+            <div class="container">
+
+                <div class="row">
+
+                    <div class="col item text">
+                        <h2>GuitarShop</h2>
+                        <p style="font-style: italic">Наш магазин є спеціалізованим у даній сфері діяльності. Ми відкрито співпрацюємо з великою кількістю майстрів по виготовленню музичних інструментів, зокрема гітар. Ви можете не перейматись за якісність придбаних товарів, оскільки ми це зробимо за вас.</p>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col item social">
+                        <a href="#"><i class="fab fa-facebook-square"></i></a>
+                        <a href="#"><i class="fab fa-twitter-square"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-instagram-square"></i></a>
+                    </div>
+                </div>
+                <p class="copyright" style="color: #FFFFFF; font-size: 15px;">Виконав Мойсак Юрій КН-310 © 2021</p>
+            </div>
+        </footer>
+
+    </form>
+</body>
+</html>

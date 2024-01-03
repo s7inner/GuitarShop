@@ -1,0 +1,93 @@
+﻿@model IEnumerable<ElibraryManagement.Data.Models.guitar_master_tbl>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_color)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_weight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_material)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.number_of_strings)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_price)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_img_link)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publisher_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.publish_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.guitar_description)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_color)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_weight)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_material)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.number_of_strings)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_price)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_img_link)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publisher_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.publish_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.guitar_description)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
